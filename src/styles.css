@@ -721,24 +721,6 @@ h2 {
   font-size: 0.65rem;
 }
 
-.compact-section-title {
-  position: relative;
-  min-width: 0;
-  padding-right: 104px;
-  margin-bottom: var(--compact-heading-gap);
-}
-
-.compact-section-title .eyebrow {
-  margin-bottom: 0;
-}
-
-.compact-section-title .smashers-count {
-  position: absolute;
-  top: 50%;
-  right: 0;
-  transform: translateY(-50%);
-}
-
 .compact-smash-stats {
   display: flex;
   flex-wrap: wrap;

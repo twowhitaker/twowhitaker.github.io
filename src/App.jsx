@@ -349,15 +349,14 @@ function CompactWidget({ view }) {
       </section>
 
       <section className="compact-section compact-smash-section">
-        <div className="compact-section-title">
-          <span className="eyebrow">🎮 Smash</span>
-          <span className="smashers-count">{data.smashers} Smashers</span>
-        </div>
+        <span className="eyebrow">🎮 Smash</span>
 
         <div className="compact-smash-stats">
           <span><strong>{data.ultimateChapters}</strong> Ultimate chapters</span>
           <span className="dot-separator">•</span>
           <span><strong>{data.fighterGuides}</strong> fighter guides</span>
+          <span className="dot-separator">•</span>
+          <span><strong>{data.smashers}</strong> Smashers</span>
         </div>
 
         <div className="compact-fighters" aria-label="Most played fighters">
