@@ -25,7 +25,7 @@ export const SERVER = {
 
   // Default presentation. Use 'full' or 'compact'. A ?layout=full or
   // ?layout=compact query parameter overrides this without rebuilding.
-  defaultLayout: import.meta.env.VITE_WIDGET_LAYOUT || 'full',
+  defaultLayout: import.meta.env.VITE_WIDGET_LAYOUT || 'compact',
   streamerWidgetUsername: 'twoWhitaker',
 
   // The public widget includes bots in its presence list. Keep the avatar pile

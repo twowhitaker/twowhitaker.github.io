@@ -685,13 +685,13 @@ h2 {
 }
 
 .compact-section {
+  --compact-heading-gap: 9px;
   padding: 15px 20px;
   border-top: 1px solid var(--line);
 }
 
-.compact-section > .eyebrow,
-.compact-section-title .eyebrow {
-  margin-bottom: 9px;
+.compact-section > .eyebrow {
+  margin-bottom: var(--compact-heading-gap);
 }
 
 .compact-now-list {
@@ -722,14 +722,21 @@ h2 {
 }
 
 .compact-section-title {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 12px;
+  position: relative;
+  min-width: 0;
+  padding-right: 104px;
+  margin-bottom: var(--compact-heading-gap);
 }
 
 .compact-section-title .eyebrow {
   margin-bottom: 0;
+}
+
+.compact-section-title .smashers-count {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
 }
 
 .compact-smash-stats {

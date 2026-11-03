@@ -29,7 +29,7 @@ build: { outDir: 'docs' }
 
 ## Pick a layout
 
-The default is **full**.
+The default is **compact**.
 
 You can change the project-wide default in `.env`:
 
