@@ -33,38 +33,38 @@ export const SERVER = {
   excludedWidgetUsers: new Set([
     'Pokétwo',
     '⭐ Live Notify',
-    '🇩🇪 Deutsch Buddy',
+    '🌍 Vocab Buddy',
     '🌅 Daykeeper',
     '🎙 Voice Desk',
     '🎧 Community Playlist',
     '🏡 Innkeeper',
     '📺 Stream Guide',
     '🟢 Play Desk',
+    '🛟 Server Recovery',
+    '🎬 LIVE Clipper',
   ]),
 }
 
-// Snapshot-backed fallbacks from the attached Sep. 18, 2026 archive.
+// Snapshot-backed fallbacks from the attached Nov. 3, 2026 archive.
 // A community status endpoint can override any of these fields at runtime.
 export const SNAPSHOT = {
-  memberCount: 109,
-  onlineAtSnapshot: 24,
-  tots: 75,
-  smashers: 71,
-  streamNotifications: 62,
-  playNotifications: 41,
+  memberCount: 127,
+  onlineAtSnapshot: 33,
+  tots: 94,
+  smashers: 86,
+  streamNotifications: 76,
+  playNotifications: 49,
   ultimateChapters: 20,
   fighterGuides: 86,
-  playlistSongs: 12,
   topFighters: [
-    { name: 'Bowser', count: 16 },
+    { name: 'Bowser', count: 18 },
+    { name: 'Captain Falcon', count: 13 },
     { name: 'Joker', count: 13 },
-    { name: 'Byleth', count: 10 },
   ],
 }
 
 export const FEATURES = [
   { icon: '🎬', label: 'Live clips' },
-  { icon: '🎵', label: 'Community playlist', dynamic: 'playlist' },
   { icon: '🌿', label: 'Pokétwo' },
   { icon: '🇩🇪', label: 'Daily German' },
   { icon: '🎙️', label: 'On-demand voice' },

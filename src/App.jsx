@@ -140,16 +140,11 @@ function RightNowRow({ icon, tone = '', title, detail, href, action, compact = f
   )
 }
 
-function Feature({ feature, data }) {
-  const label =
-    feature.dynamic === 'playlist'
-      ? `${data.playlistSongs ?? SNAPSHOT.playlistSongs}-song playlist`
-      : feature.label
-
+function Feature({ feature }) {
   return (
     <div className="feature-pill">
       <span>{feature.icon}</span>
-      <span>{label}</span>
+      <span>{feature.label}</span>
     </div>
   )
 }
@@ -268,7 +263,7 @@ function FullWidget({ view }) {
 
         <div className="feature-grid">
           {FEATURES.map((feature) => (
-            <Feature feature={feature} data={data} key={feature.label} />
+            <Feature feature={feature} key={feature.label} />
           ))}
         </div>
       </section>
@@ -376,7 +371,7 @@ function CompactWidget({ view }) {
         <span className="eyebrow">☕ Around the server</span>
         <div className="compact-features">
           {FEATURES.map((feature) => (
-            <Feature feature={feature} data={data} key={feature.label} />
+            <Feature feature={feature} key={feature.label} />
           ))}
         </div>
       </section>

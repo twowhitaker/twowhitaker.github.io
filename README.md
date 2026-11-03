@@ -1,6 +1,6 @@
 # TwoWhit’s Tots — dynamic server widget
 
-A Vite + React server card built from the Sep. 18, 2026 Discord snapshot and the public Discord widget API.
+A Vite + React server card built from the Nov. 3, 2026 Discord snapshot and the public Discord widget API.
 
 The package includes **two layouts** that share the same live data and configuration:
 
@@ -74,13 +74,12 @@ The app still works if that request fails; it falls back to values from the atta
 
 The current fallbacks are in `src/config.js`:
 
-- 109 members
-- 75 Tots
-- 71 Smashers
+- 127 members
+- 94 Tots
+- 86 Smashers
 - 20 Ultimate guide chapters
 - 86 fighter guides
-- 12 playlist songs
-- top fighters: Bowser 16, Joker 13, Byleth 10
+- top fighters: Bowser 18, Captain Falcon 13, Joker 13
 
 Update those manually when you take a new snapshot, or use the optional status feed below.
 
