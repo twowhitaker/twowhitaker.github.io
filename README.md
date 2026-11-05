@@ -1,11 +1,6 @@
 # TwoWhit’s Tots — dynamic server widget
 
-A Vite + React server card built from the Nov. 3, 2026 Discord snapshot and the public Discord widget API.
-
-The package includes **two layouts** that share the same live data and configuration:
-
-- **Full** — the richer landing-card version
-- **Compact** — a shorter version with the same core identity, live status, Smash stats, features, and join CTA
+A Vite + React server card built from the Nov. 3, 2026 Discord snapshot and the public Discord widget API. The compact card is the single supported layout.
 
 ## Run it
 
@@ -26,36 +21,6 @@ npm run build
 base: ''
 build: { outDir: 'docs' }
 ```
-
-## Pick a layout
-
-The default is **compact**.
-
-You can change the project-wide default in `.env`:
-
-```env
-VITE_WIDGET_LAYOUT=compact
-```
-
-Accepted values are `full` and `compact`.
-
-For easy comparison, the URL can override the default without rebuilding:
-
-```text
-?layout=full
-?layout=compact
-```
-
-`?layout=condensed` is also accepted as an alias for compact.
-
-For iframe use, combine it with embed mode:
-
-```text
-?embed=1&layout=full
-?embed=1&layout=compact
-```
-
-That makes it easy to keep both versions deployed and decide which one you prefer from the embedding page.
 
 ## What is live with no backend
 
@@ -85,7 +50,7 @@ Update those manually when you take a new snapshot, or use the optional status f
 
 ## Optional richer live feed
 
-Discord's public widget API cannot expose Play Desk state, role counts, your tournament panel, TikTok LIVE state, or other bot-owned data. To make those pieces truly live, expose a small **public read-only JSON endpoint** from one of your existing bots / a Cloudflare Worker / another backend.
+Discord's public widget API cannot expose Smash Arenas state, role counts, your tournament panel, TikTok LIVE state, or other bot-owned data. To make those pieces truly live, expose a small **public read-only JSON endpoint** from one of your existing bots / a Cloudflare Worker / another backend.
 
 Copy `.env.example` to `.env` and set:
 
@@ -101,33 +66,23 @@ Any missing value automatically falls back to the snapshot.
 
 ### Important security note
 
-Never put a Discord bot token, Spotify secret, Render API key, or any other secret in a `VITE_*` variable. Vite variables are shipped to the browser. The status URL should expose only public, read-only data and handle secrets server-side.
+Never put a Discord bot token, Render API key, or any other secret in a `VITE_*` variable. Vite variables are shipped to the browser. The status URL should expose only public, read-only data and handle secrets server-side.
 
 The status endpoint must also allow CORS from wherever this widget is hosted.
 
 ## Embedding
 
-Both layouts are responsive on their own. For a transparent iframe-friendly page, add:
+For a transparent iframe-friendly page, add:
 
 ```text
 ?embed=1
 ```
 
-Full example:
+Example:
 
 ```html
 <iframe
-  src="https://your-site.example/?embed=1&layout=full"
-  title="TwoWhit’s Tots"
-  style="width: 540px; max-width: 100%; height: 960px; border: 0;"
-></iframe>
-```
-
-Compact example:
-
-```html
-<iframe
-  src="https://your-site.example/?embed=1&layout=compact"
+  src="https://your-site.example/?embed=1"
   title="TwoWhit’s Tots"
   style="width: 520px; max-width: 100%; height: 650px; border: 0;"
 ></iframe>
